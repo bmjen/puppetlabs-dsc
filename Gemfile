@@ -46,7 +46,23 @@ group :development do
   gem "puppet-module-posix-default-r#{minor_version}", :require => false, :platforms => "ruby"
   gem "puppet-module-win-default-r#{minor_version}",   :require => false, :platforms => ["mswin", "mingw", "x64_mingw"]
   gem "puppet-module-posix-dev-r#{minor_version}",     :require => false, :platforms => "ruby"
-  gem "puppet-module-win-dev-r#{minor_version}",       :require => false, :platforms => ["mswin", "mingw", "x64_mingw"]
+
+  #gem "puppet-module-win-dev-r#{minor_version}",       :require => false, :platforms => ["mswin", "mingw", "x64_mingw"]
+  #gem "gettext-setup", '~> 0.26'
+  gem "metadata-json-lint", '>= 2.0.1', '< 3.0.0'
+  gem "mocha", '>= 1.0.0', '< 1.2.0'
+  gem "parallel_tests", '>= 2.14.1', '< 3.0.0'
+  gem "pry", '~> 0.10.4'
+  gem "puppetlabs_spec_helper", '>= 2.2.0', '< 3.0.0'
+  gem "puppet-lint", '>= 2.3.0', '< 3.0.0'
+  gem "puppet-syntax", '>= 2.4.1', '< 3.0.0'
+  gem "rainbow", '>= 2.0.0', '< 2.2.0'
+  gem "rspec_junit_formatter", '~> 0.2'
+  gem "rspec-puppet", '>= 2.3.2', '< 3.0.0'
+  gem "rspec-puppet-facts", '~> 1.8'
+  gem "rubocop", '~> 0.49'
+  gem "rubocop-rspec", '~> 1.15'
+  gem "specinfra", '2.67.3'
   gem "json_pure", '<= 2.0.1',                         :require => false if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new('2.0.0')
   gem "fast_gettext", '1.1.0',                         :require => false if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new('2.1.0')
   gem "fast_gettext",                                  :require => false if Gem::Version.new(RUBY_VERSION.dup) >= Gem::Version.new('2.1.0')
